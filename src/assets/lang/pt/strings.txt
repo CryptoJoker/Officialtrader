@@ -1,0 +1,111 @@
+[common]
+and = "e"
+dismiss = "Descartar"
+
+[warning]
+warning="AVISO"
+Duetoextremelyhighmediademandwewillcloseregistrationasof="Devido à demanda de mídia extremamente alta, encerraremos os cadastros a partir de"
+hurry="CORRA!"
+
+[header]
+exclusiveOffersFor = "Ofertas exclusivas para"
+tradesIn = "transações em"
+justWon = "ganhos recentes"
+
+[dialog]
+congratulations = "Parabéns!"
+youJustGotLuckyAndWeveBeenAbleToRegisterYouWithTheBESTbrokerFromThisSector = "Você deu sorte e conseguimos cadastrar você com o MELHOR corretor deste setor"
+yourSECURITYisOurPriority = "Sua SEGURANÇA é nossa prioridade máxima"
+perTheirTerms = "De acordo com os termos dele"
+takesStrictsMeasuresToProtectTheirClientsHoldingsAndTheirPrivacy = "toma medidas rigorosas para proteger os bens de seus clientes e sua privacidade"
+greaterPayments = "Receita superior"
+offersUpTo88profitabilityPerSuccessfulOperation = "oferece rentabilidade de até 88% a cada operação bem-sucedida!"
+clickHereToStartInvesting = "Clique aqui para começar a investir"
+
+[section1]
+bitcoinIsMakingPeopleRich = "O bitcoin está tornando as pessoas ricas"
+andYouCanBecome = "E você pode se tornar"
+TheNextMillionaire = "o próximo milionário..."
+
+[form]
+changeYourLifeToday = "Mude sua vida hoje!"
+name = "Nome"
+lastName = "Sobrenome"
+email = "E-mail"
+next = "Próximo"
+password = "Senha"
+passwordRepeat = "Confirme a senha"
+phone = "(201) 555-5555"
+registerNow = "Cadastre-se agora"
+validationPleaseEnterAValidEmail = "E-mail: insira um e-mail válido"
+validation2CharsMinimumNoNumbersOrSpecialCharacters = "Nome/Sobrenome: mínimo de 2 letras; proibidos números ou caracteres especiais"
+validationOnlyAlphanumericCharactersAllowedPasswordMustBeGreaterThan6CharactersAndContainAtLeast1LetterAnd1Number = "Senha: somente caracteres alfanuméricos são permitidos. A senha deve conter entre 6-9 caracteres e incluir pelo menos 1 letra e 1 número"
+validationThePasswordsDoNotMatch = "As senhas não correspondem"
+validationPleaseEnterAValidPhone = "Telefone: insira um telefone válido"
+
+[section2]
+bid = "Compra"
+ask = "Venda"
+joinUsAndStartGettingRichWith = "Junte-se a nós e comece a ficar rico com o"
+bitcoinTrader = "BitcoinTrader!"
+theBitcoinTraderIsAGroupReservedExclusivelyToPeopleWhoJumpedOnTheInsaneReturnsThatBitcoinOffersAndHaveQuietlyAmassedAFortuneInDoingSo = "BitcoinTrader é um grupo exclusivamente reservado às pessoas que conquistaram os incríveis retornos oferecidos pelo Bitcoin e que silenciosamente acumularam uma fortuna dessa forma."
+bitcoinTraderMembersEnjoyRetreatsAroundTheWorldEveryMonthWhileTheyMakeMoneyOnTheirLaptopWithJustAFewMinutesOfWorkEveryDay = "Os membros do BitcoinTrader relaxam tranquilos ao redor do mundo todos os meses enquanto ganham dinheiro com seus laptops através de apenas alguns minutos de \"trabalho\" diário."
+asSeenOn = "Como visto em"
+
+[section3]
+LaserAccuratePerformance = "Desempenho de alta precisão"
+ThereIsNoOtherTradingAppInTheWorldThatPerformsAtThe994LevelOfAccuracyThatTheBitcoinTraderIsAbleToHitThatsWhyOurMembersFromAroundTheWorldTrustUsToDoubleTripleAndQuadrupleTheirHardearnedMoney = "Não existe outro app de trading no mundo com o nível de precisão de 99,4% que o Bitcoin Trader consegue atingir. É por isso que nossos membros do mundo inteiro confiam em nós para duplicar, triplicar e quadruplicar seu dinheiro suado."
+SuperiorTechnology = "Tecnologia superior"
+TheBitcoinTraderSoftwareHasBeenCreatedUsingTheMostAdvancedProgrammingTheTradingWorldHasEverSeenTheSoftwareIsAheadOfTheMarketsBy001SecondsAndIfYouKnowAnythingAboutTradingYouKnowThisIsAHugeDealThistimeLeapMakesTheSoftwareTheMostConsistentTradingAppOnThePlanet = "O software do Bitcoin Trader foi criado usando a programação mais avançada já vista no mundo do trading. O software está à frente dos mercados por 0,01 segundo. E, se você conhece alguma coisa sobre trading, sabe que isso é muito. Este "salto de tempo" faz do software o app de trading mais consistente do planeta."
+AwardWinningTradingApp = "Premiado app de trading"
+TheBitcoinTraderAppHasWonANumberOfAwardsTheMostRecentAwardWeHaveHadTheHonorOfReceivingIsGetting1InTheTradingSoftwareCategoryForTheUSTradingAssociation = "O app do Bitcoin Trader ganhou vários prêmios. O prêmio mais recente que tivemos a honra de receber foi o primeiro lugar na categoria de software de trading da US Trading Association."
+
+[section4]
+realTestimonialsFromOurUsers = "DEPOIMENTOS REAIS DE NOSSOS USUÁRIOS"
+profit="Lucro"
+
+[section5]
+iveBeenAMemberOfTheBitcoinTraderForOnly47DaysButMyLifeHasAlreadyChangedNotOnlyHaveIMadeMyFirst10KButIveAlsoMetSomeOfTheMostIncrediblePeopleInTheProcessThanksBitcoinTrader = "Eu sou membro do Bitcoin Trader há apenas 47 dias. Porém, minha vida já mudou! Eu não apenas ganhei meus primeiros US$ 10 mil, como  também conheci algumas das pessoas mais incríveis durante o processo. Obrigado, Bitcoin Trader!"
+iFinallyKnowWhatItsLikeToLiveTheDreamINoLongerFeelLikeImOnTheOutsideLookingInWhileEveryoneElseHasAllTheFunTheBitcoinTraderhasAllowedMeToRetireEarlyAndLiveThe1Lifestyle = "Eu finalmente sei o que é viver o sonho americano. Não sinto mais que estou de fora, observando enquanto todo mundo aproveita toda a diversão. O Bitcoin Trader permitiu que eu me aposentasse cedo e vivesse o estilo de vida do 1% mais rico."
+surprisinglyIUsedToBeAnInvestorOnWallStreetAndIveNeverSeenAnythingLikeThisInMy10YearTenureAtTheCompanyMyColleaguesAllThoughtIWasCrazyWhenIQuitTheFirmToInvestWithTheBitcoinTraderSoftwareFulltime38459InProfitsLaterAllOfMyColleaguesAreNowBEGGINGMeToLetThemIn = "Surpreendentemente, eu era investidor em Wall Street. E nunca vi nada assim em meus 10 anos na empresa. Todos os meus colegas acharam que eu estava louco quando larguei a empresa para investir com o software Bitcoin Trader em tempo integral. Após faturar US$ 38.459 em lucros, todos os meus colegas estão agora me IMPLORANDO para deixá-los participar."
+twoWeeksAgoIGotLaidOffWithNoOptionsLeftIThoughtMyLifeWasOverNowImMakingOver126142EachAndEveryDayAndForTheFirstTimeIn2MonthsMyAccountIsntOverdrawnThanksBitcoinTrader = "Duas semanas atrás, eu fui demitido. Sem opções, achei que minha vida tinha acabado. Agora, estou ganhando mais de US$ 1.261,42 todos os dias. E, pela primeira vez em 2 meses, meu saldo não está negativo. Obrigado, Bitcoin Trader!"
+
+[section6]
+openFreeAccount="Abrir conta grátis"
+joinNow="Cadastre-se agora!"
+howItWorks = "Como funciona"
+step1 = "1º PASSO"
+fillOutTheRegistrationFormOnThisPage = "Preencha o formulário de cadastro nesta página"
+onceYourRegistrationIsAcceptedYouWillAutomaticallyBecomeTheNewestMemberOfTheBitcoinTraderThisMeansYouWillGetToClaimOurProprietaryBitcoinTradingSoftwareForFree = "Quando seu cadastro for aceito, você automaticamente se tornará o mais novo membro do Bitcoin Trader. Isso significa que você poderá obter gratuitamente nosso exclusivo software de negociação de bitcoins."
+step2 = "2º PASSO"
+fundYourAccount = "Adicione fundos à sua conta"
+likeAnyBusinessYouNeedWorkingCapitalToGetStartedSoToStartProfitingWithTheBitcoinTraderYouMustInvestAnyAmountYouDesireOf250OrMore = "Como qualquer negócio, você precisa de capital de giro para começar. Portanto, para começar a lucrar com o Bitcoin Trader, você deve investir qualquer quantia desejada a partir de US$ 250..."
+step3 = "3º PASSO"
+startProfiting = "Comece a lucrar"
+clickTradeToEnjoyPreciseAndAccurateHandsfreeTradingPoweredByOurAwardwinningAlgorithmYouCanAlsoSetTheTradingToManualIfYouPreferToTradeOnYourOwn = "Clique em negociar para desfrutar um trading preciso e automático, potencializado pelo nosso premiado algoritmo. Você também pode transacionar manualmente, caso prefira fazê-lo por conta própria."
+
+[section7]
+frequentlyAskedQuestions = "Perguntas frequentes"
+whatKindOfResultsCanIExpect = "Posso esperar que tipo de resultados?"
+bitcoinTraderMembersTypicallyProfitAMinimumOf1300Daily = "Os membros do Bitcoin Trader lucram, normalmente, um mínimo de US$ 1.300 diariamente."
+howManyHoursPerDayDoINeedToWork = "Preciso trabalhar quantas horas por dia?"
+ourMembersWorkAnAverageOf20MinutesADayOrLessBecauseTheSoftwareHandlesTheTradingTheAmountOfworkRequiredIsMinimal = "Nossos membros trabalham, em média, 20 minutos por dia ou menos. Como o software fica encarregado pelas negociações, a quantidade de \"trabalho"\ é mínima."
+whatIsTheMaximumAmountThatICanMake = "Qual é a quantia máxima que posso lucrar?"
+yourProfitsAreUnlimitedWithinTheBitcoinTraderSomeMembersEarnedTheirFirstMillionWithinJust61Days = "Seus lucros são ilimitados com o Bitcoin Trader. Alguns membros ganharam seu primeiro milhão em apenas 61 dias."
+howMuchDoesTheSoftwareCost = "Quanto custa o software?"
+membersOfTheBitcoinTraderGetACopyOfOurProprietarySoftwareFreeOfChargeToBecomeAMemberSimplyFillOutTheFormOnThisPage = "Os membros do Bitcoin Trader recebem uma cópia do nosso exclusivo software gratuitamente. Para se tornar um membro, basta preencher o formulário nesta página."
+isThisLikeMLMOrAffiliateMarketing = "Isto é como MLM ou marketing de afiliados?"
+thisIsNotLikeMLMAffiliateMarketingOrAnythingElseOutThereTheSoftwareIsPoweredByAnInnovativeAlgorithmThatWinsTradesWith994Accuracy = "Isto não é como MLM, marketing de afiliados ou qualquer outra coisa. O software é potencializado por um algoritmo inovador que ganha as negociações com 99,4% de precisão."
+areThereAnyFees = "É preciso pagar taxas?"
+thereAreNoHiddenFeesNoBrokerFeesOrCommissionsAllOfYourMoneyIs100YoursAndYouAreFreeToWithdrawItAtAnyTimeYouChooseWithoutDelay = "Não há taxas escondidas. Não há taxas de corretoras, nem comissões. Todo o seu dinheiro é 100% seu, e você é livre para sacá-lo quando quiser, sem demoras."
+
+[section8]
+getStartedNow = "Comece agora!"
+
+[liveresults]
+liveProfitResults="RESULTADOS DE LUCROS AO VIVO"
+bitcoinTrader="Bitcoin Trader"
+profit="Lucro"
+tradeTime="Hora da transação"
+cryptocurrency="Criptomoeda"
+result="Resultado"

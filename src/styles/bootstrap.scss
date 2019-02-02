@@ -1,0 +1,32 @@
+// @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Roboto:300,400,900');
+
+$font-family-sans-serif:      'Roboto', Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-base: .9rem;
+
+$line-height-base:            1;
+$line-height-lg:              1;
+$line-height-sm:              1;
+
+$h2-font-size:                $font-size-base * 4;
+$h3-font-size:                $font-size-base * 3;
+$h4-font-size:                $font-size-base * 1.75;
+
+$success: #08D908;
+$danger: #da2832;
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_mixins";

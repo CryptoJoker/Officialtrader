@@ -1,0 +1,77 @@
+<ng-container class="landing">
+  <div id="gridSystemModal" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body px-0 py-4 px-md-5">
+          <div class="container loading align-items-center justify-content-center p-5" *ngIf="modal.isLoading">
+            <div class="spinner"></div>
+          </div>
+          <div class="container-fluid p-0" *ngIf="!modal.isLoading && !modal.success">
+            <div class="row">
+              <div class="col d-flex flex-column align-items-center justify-content-center">
+                <div class="alert alert-danger">{{ broker.message }}</div>
+                <button class="mx-auto btn btn-danger" (click)="dismissModal()">{{ str.common?.dismiss }}</button>
+              </div>
+            </div>
+          </div>
+          <div class="container container-md-fluid" *ngIf="!modal.isLoading && modal.success">
+            <div class="row">
+              <div class="col text-center pb-3">
+                <h2>{{ str.dialog?.congratulations }}</h2>
+                <p>
+                  <strong>{{ str.dialog?.youJustGotLuckyAndWeveBeenAbleToRegisterYouWithTheBESTbrokerFromThisSector }}</strong>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col px-5">
+                <div class="row">
+                  <div class="col pb-lg-0 pb-4 d-flex align-items-center justify-content-center">
+                    <img class="broker img-fluid" [src]="broker.logo">
+                  </div>
+                  <div class="col-12 col-lg">
+                    <div class="row d-block mb-4 d-flex flex-row">
+                      <div class="col-auto">
+                        <img src="./assets/img/Shield.png">
+                      </div>
+                      <div class="col">
+                        <h3>{{ str.dialog?.yourSECURITYisOurPriority }}</h3>
+                        <p class="text-justify">{{ str.dialog?.perTheirTerms }}, {{ broker.name }} {{
+                          str.dialog?.takesStrictsMeasuresToProtectTheirClientsHoldingsAndTheirPrivacy
+                          }}</p>
+                      </div>
+                    </div>
+                    <div class="row d-block mb-4 d-flex flex-row">
+                      <div class="col-auto">
+                        <img src="./assets/img/Cash.png">
+                      </div>
+                      <div class="col">
+                        <h3>{{ str.dialog?.greaterPayments }}</h3>
+                        <p class="text-justify">{{ broker.name }} {{
+                          str.dialog?.offersUpTo88profitabilityPerSuccessfulOperation }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center">
+                <button class="btn btn-lg" (click)="autologin()">{{ str.dialog?.clickHereToStartInvesting }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-one">
+  </section>
+
+  <section class="section-two py-3 pb-5">
+
+  </section>
+
+
+</ng-container>

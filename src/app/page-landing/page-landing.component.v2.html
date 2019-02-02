@@ -1,0 +1,503 @@
+<ng-container class="landing">
+
+    <div id="gridSystemModal" id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body px-0 py-4 px-md-5">
+                    <div class="container loading align-items-center justify-content-center p-5" *ngIf="modal.isLoading">
+                        <div class="spinner"></div>
+                    </div>
+                    <div class="container-fluid p-0" *ngIf="!modal.isLoading && !modal.success">
+                        <div class="row">
+                            <div class="col d-flex flex-column align-items-center justify-content-center">
+                                <div class="alert alert-danger">{{ broker.message }}</div>
+                                <button class="mx-auto btn btn-danger" (click)="dismissModal()">{{ str.common?.dismiss }}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container container-md-fluid" *ngIf="!modal.isLoading && modal.success">
+                        <div class="row">
+                            <div class="col text-center pb-3">
+                                <h2>{{ str.dialog?.congratulations }}</h2>
+                                <p>
+                                    <strong>{{ str.dialog?.youJustGotLuckyAndWeveBeenAbleToRegisterYouWithTheBESTbrokerFromThisSector
+                                        }}
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col px-5">
+                                <div class="row">
+                                    <div class="col pb-lg-0 pb-4 d-flex align-items-center justify-content-center">
+                                        <img class="broker img-fluid" [src]="broker.logo">
+                                    </div>
+                                    <div class="col-12 col-lg">
+                                        <div class="row d-block mb-4 d-flex flex-row">
+                                            <div class="col-auto">
+                                                <img src="./assets/img/Shield.png">
+                                            </div>
+                                            <div class="col">
+                                                <h3>{{ str.dialog?.yourSECURITYisOurPriority }}</h3>
+                                                <p class="text-justify">{{ str.dialog?.perTheirTerms }}, {{ broker.name }} {{ str.dialog?.takesStrictsMeasuresToProtectTheirClientsHoldingsAndTheirPrivacy
+                                                    }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row d-block mb-4 d-flex flex-row">
+                                            <div class="col-auto">
+                                                <img src="./assets/img/Cash.png">
+                                            </div>
+                                            <div class="col">
+                                                <h3>{{ str.dialog?.greaterPayments }}</h3>
+                                                <p class="text-justify">{{ broker.name }} {{ str.dialog?.offersUpTo88profitabilityPerSuccessfulOperation
+                                                    }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <iframe [src]="broker.iframeURL" frameborder=0 width=1 height=1></iframe>
+                                <button class="btn btn-lg" (click)="autologin()">{{ str.dialog?.clickHereToStartInvesting }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="countdown p-1 text-center font-1">
+        <div class="container">
+            <strong>{{ str.warning?.warning }}: </strong> {{ str.warning?.Duetoextremelyhighmediademandwewillcloseregistrationasof
+            }}
+            <strong>{{ todayDate }} - {{ str.warning?.hurry }}</strong> {{ countdownTimer }}</div>
+        <span class="timer"></span>
+    </div>
+    <div class="header container">
+        <div class="row">
+            <div class="col logo d-flex align-items-center py-3">
+                <img src="./assets/img/logo-small.png" class="img-fluid d-inline-block align-top" alt="">
+            </div>
+            <div class="col location justify-content-center align-items-center d-none d-md-flex">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="font-2">{{ str.header?.exclusiveOffersFor }}</div>
+                        <div class="font-3">{{ str.header?.tradesIn }} {{ selfInfo.country_name }}</div>
+                    </div>
+                    <div class="col-auto d-flex align-items-center justify-content-center">
+                        <span [class]="selfInfo.flagClass"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto earnings justify-content-center align-items-center d-none d-lg-flex">
+                <div class="row">
+                    <div class="col-auto">
+                        <img class="photo img-fluid" [src]="person.photo" height="64px">
+                    </div>
+                    <div class="col-auto font-4">
+                        <div class="name text-center">
+                            <div>{{ person.name }}</div>
+                            <div>{{ str.header?.justWon }}</div>
+                        </div>
+                        <div class="value text-center">{{ person.amount }} {{selfInfo.currency}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-jumbotron">
+        <div class="bg"></div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col text-center pb-4">
+                    <h2 class="font-5">{{ str.section1?.bitcoinIsMakingPeopleRich }}</h2>
+                    <h3 class="font-6">{{ str.section1?.andYouCanBecome }}
+                        <span class="font-7">{{ str.section1?.TheNextMillionaire }}</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-7 col-sm-12 col-lg-8">
+                    <div class="embed-container">
+                        
+                        <video class="bitcoin-video" id="bitcoin-video" src="./assets/media/bitcoin.mp4" controls="" controlslist="nodownload" playsinline autoplay muted loop
+                            width="100%" poster="./assets/img/videothumbnail.jpg" *ngIf="selfInfo.subtitlePath">
+                            <track kind="subtitles" srclang="es" [src]="selfInfo.subtitlePath" default="">
+                        </video>
+                        <!-- <video class="bitcoin-video" id="bitcoin-video" src="./assets/media/bitcoin.mp4" controls="" width="100%" poster="./assets/img/videothumbnail.jpg"
+                            *ngIf="selfInfo.subtitlePath">
+                            <track kind="subtitles" srclang="es" [src]="selfInfo.subtitlePath" default="">
+                        </video> -->
+                    </div>
+                </div>
+                <div class="col form-wrapper d-flex flex-column mt-4 mx-3 mx-md-0 mt-md-0">
+                    <div class="loading align-items-center justify-content-center p-4" *ngIf="formData.isLoading">
+                        <div class="spinner"></div>
+                    </div>
+                    <div class="validation align-items-center justify-content-center p-4" *ngIf="formData.showDialog">
+                        <ul>
+                            <li class="alert alert-danger px-5 py-3" *ngFor="let validation of formData.validations">{{ validation }}</li>
+                            <li>
+                                <button class="btn btn-danger" (click)="dismissDialog()">{{ str.common?.dismiss }}</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-shadow">
+                        <div class="col-auto form-container p-4">
+                            {{ str.form?.changeYourLifeToday }}
+                        </div>
+                        <div class="col-auto form-content pb-4" [ngClass]="{ 'col2': pageNumber == 2 }">
+                            <div class="steps">
+                                <ul>
+                                    <li class="col d-flex align-items-center justify-content-center" [ngClass]="{ 'active': pageNumber == 0, 'completed': pageNumber > 0 }"
+                                        (click)="backToPage(0)"></li>
+                                    <li class="col d-flex align-items-center justify-content-center" [ngClass]="{ 'active': pageNumber == 1, 'completed': pageNumber > 1 }"
+                                        (click)="backToPage(1)"></li>
+                                    <li class="col d-flex align-items-center justify-content-center" [ngClass]="{ 'active': pageNumber == 2 }"></li>
+                                </ul>
+                            </div>
+                            <div class="form-row pt-4" [hidden]="!(pageNumber == 0)">
+                                <div class="form-group col-12">
+                                    <input class="form-control" type="text" name="firstName" [placeholder]="str.form?.name" [(ngModel)]="formData.firstName"> 
+                                </div>
+                                <div class="form-group col-12">
+                                    <input class="form-control" type="text" name="lastName" [placeholder]="str.form?.lastName" [(ngModel)]="formData.lastName">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input class="form-control" type="email" name="" [placeholder]="str.form?.email" [(ngModel)]="formData.email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <button class="btn btn-next p-3" (click)="next()">{{ str.form?.next }}</button>
+                                </div>
+                            </div>
+                            <div class="form-row pt-4" [hidden]="!(pageNumber == 1)">
+                                <div class="form-group col-12">
+                                    <input class="form-control" type="password" name="password" [placeholder]="str.form?.password" [(ngModel)]="formData.password">
+                                </div>
+                                <div class="form-group col-12">
+                                    <input class="form-control" type="password" name="passwordRepeat" [placeholder]="str.form?.passwordRepeat" [(ngModel)]="formData.passwordRepeat">
+                                </div>
+                                <div class="form-group col-12">
+                                    <button class="btn btn-next p-3" (click)="next()">{{ str.form?.next }}</button>
+                                </div>
+                            </div>
+                            <div class="form-row pt-4 justify-content-end align-items-end" [ngClass]="{ 'd-flex': pageNumber == 2 }" [hidden]="!(pageNumber == 2)">
+                                <div class="form-group col-12">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="form-control dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span [class]="currentCountry.class"></span> +{{ currentCountry.countryCode }}
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <button class="dropdown-item px-1 py-2" *ngFor="let country of countries" (click)="selectCountry(country)">
+                                                    <span [class]="country.class"></span>&nbsp;
+                                                    <span class="country-name">(+{{ country.countryCode }}) {{ country.name }}</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <input type="tel" name="phone" class="form-control" [placeholder]="str.form?.phone" [(ngModel)]="formData.phone">
+                                    </div>
+                                    <button class="btn btn-next p-3" (click)="submit()">{{ str.form?.registerNow }}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-security-bidask py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-8 justify-content-around align-items-center d-flex flex-column flex-md-row">
+                    <img class="mx-3 pt-3 pt-md-0" src="./assets/img/bitgo.png">
+                    <img class="mx-3 pt-3 pt-md-0" src="./assets/img/norton.png">
+                    <img class="mx-3 pt-3 pt-md-0" src="./assets/img/secure-trading.png">
+                    <img class="mx-3 pt-3 pt-md-0" src="./assets/img/mcafee.png">
+                </div>
+                <div class="col col-md-4 pt-5 pt-md-0 justify-content-center align-items-center d-flex">
+                    <div class="row">
+                        <div class="col bid text-center">
+                            <sup class="font-8">{{ str.section2?.bid }}</sup>&nbsp;
+                            <span class="font-9">3100 {{selfInfo.currency}}</span>
+                        </div>
+                        <div class="col ask text-center pt-3 pt-md-0">
+                            <sup class="font-8">{{ str.section2?.ask }}</sup>&nbsp;
+                            <span class="font-9">3100 {{selfInfo.currency}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-join-us pb-0 py-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="font-10">
+                        <span class="font-10">{{ str.section2?.joinUsAndStartGettingRichWith }}</span>
+                        <span class="font-10" style="color: #5f3394">&nbsp;{{ str.section2?.bitcoinTrader }}</span>
+                    </h1>
+                    <br>
+                    <p class="font-11 pt-5">
+                        <span>{{ str.section2?.theBitcoinTraderIsAGroupReservedExclusivelyToPeopleWhoJumpedOnTheInsaneReturnsThatBitcoinOffersAndHaveQuietlyAmassedAFortuneInDoingSo
+                            }} {{ str.section2?.bitcoinTraderMembersEnjoyRetreatsAroundTheWorldEveryMonthWhileTheyMakeMoneyOnTheirLaptopWithJustAFewMinutesOfWorkEveryDay
+                            }}
+                        </span>
+                    </p>
+                    <img class="d-block d-md-none" src="./assets/img/v2/girl-holding-bitcoin.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-news pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <span class="seen">{{ str.section2?.asSeenOn }}</span>
+                    <img src="./assets/img/v2/seenon.jpg">
+                </div>
+                <div class="col-md-7 d-none d-md-block">
+                    <div class="join-us-img">
+                        <img src="./assets/img/v2/girl-holding-bitcoin.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-testimonials" *ngIf="people.length > 0">
+        <h1 class="text-center mb-4 font-12 text-uppercase">{{ str.section4.realTestimonialsFromOurUsers }}</h1>
+        <div class="row no-gutters">
+            <div class="col-md-6 col-sm-12 col-lg-3" *ngFor="let i of testimonialsOrder">
+                <div class="content-image"></div>
+                <div class="testimonial-wrapper text-center" [style.backgroundImage]="'url('+ people[i].photo +')'">
+                    <div class="testimonial-intro-text white">
+                        <span>{{ people[i].name }}</span>
+                        <br>
+                        <span>{{ people[i].region }}</span>
+                        <br>
+                        <span class="yellow testimonial-profit-span">
+                            <span>{{ str.section4.profit }}</span>:
+                            <span data-init="visitor-currency-symbol"></span>12923 {{selfInfo.currency}}</span> 
+                    </div>
+                    <div class="testimonial-hover-text">
+                        <i>"
+                            <span>{{ people[i].testimonial }}</span>"</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 feature-wrapper-col">
+                    <div class="feature-wrapper">
+                        <div class="feature-img-wrapper">
+                            <img src="./assets/img/v2/feature-img-1.png" class="feature-img" alt="feature 1">
+                        </div>
+                        <h5 class="feature-header text-uppercase">{{ str.section3?.LaserAccuratePerformance }}</h5>
+                        <p class="feature-description">{{ str.section3?.ThereIsNoOtherTradingAppInTheWorldThatPerformsAtThe994LevelOfAccuracyThatTheBitcoinTraderIsAbleToHitThatsWhyOurMembersFromAroundTheWorldTrustUsToDoubleTripleAndQuadrupleTheirHardearnedMoney
+                            }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 feature-wrapper-col">
+                    <div class="feature-wrapper">
+                        <div class="feature-img-wrapper">
+                            <img src="./assets/img/v2/feature-img-2.png" class="feature-img" alt="feature 1">
+                        </div>
+                        <h5 class="feature-header text-uppercase">{{ str.section3?.SuperiorTechnology }}</h5>
+                        <p class="feature-description">{{ str.section3?.TheBitcoinTraderSoftwareHasBeenCreatedUsingTheMostAdvancedProgrammingTheTradingWorldHasEverSeenTheSoftwareIsAheadOfTheMarketsBy001SecondsAndIfYouKnowAnythingAboutTradingYouKnowThisIsAHugeDealThistimeLeapMakesTheSoftwareTheMostConsistentTradingAppOnThePlanet
+                            }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 feature-wrapper-col">
+                    <div class="feature-wrapper">
+                        <div class="feature-img-wrapper">
+                            <img src="./assets/img/v2/feature-img-3.png" class="feature-img" alt="feature 1">
+                        </div>
+                        <h5 class="feature-header text-uppercase">{{ str.section3?.AwardWinningTradingApp }}</h5>
+                        <p class="feature-description">{{ str.section3?.TheBitcoinTraderAppHasWonANumberOfAwardsTheMostRecentAwardWeHaveHadTheHonorOfReceivingIsGetting1InTheTradingSoftwareCategoryForTheUSTradingAssociation
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="live-results">
+        <div class="container py-5 text-center">
+            <div class="row">
+                <div class="col">
+                    <button class="yellow-btn join-now-btn scroll-top-btn text-uppercase" (click)="scrollTop()">
+                        <span>{{ str.section6.joinNow }}</span>
+                    </button>
+                    <h1 class="font-13 py-3">{{ str.liveresults?.liveProfitResults }}</h1>
+                    <table class="live-results-table">
+                        <thead class="thead">
+                            <tr>
+                                <th class="dark-purple padding-left-td">{{ str.liveresults?.bitcoinTrader }}</th>
+                                <th class="dark-purple padding-left-td">{{ str.liveresults?.profit }}</th>
+                                <th class="dark-purple padding-left-td">{{ str.liveresults?.tradeTime }}</th>
+                                <th class="dark-purple padding-left-td">{{ str.liveresults?.cryptocurrency }}</th>
+                                <th class="dark-purple padding-left-td">{{ str.liveresults?.result }}</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr *ngFor="let trade of trades">
+                                <td class="bold">{{ trade.name }}</td>
+                                <td class="bold">{{ trade.profit }} {{selfInfo.currency}}</td>
+                                <td class="trade-time-td padding-left-td">{{ trade.date }}</td>
+                                <td>{{ trade.pair }}</td>
+                                <td>
+                                    <img src="./assets/img/v2/tick.png" alt="tick">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="how-it-works-section text-center">
+        <div class="container">
+            <div class="how-it-works-wrapper">
+                <h1 class="font-13 mb-5 text-uppercase">{{ str.section6?.howItWorks }}</h1>
+                <div class="row no-gutters">
+                    <div class="col-md-4 step-wrapper-col">
+                        <div class="step-wrapper step-wrapper-1">
+                            <h3 class="step-header white step-header-1">{{ str.section6?.step1 }}</h3>
+                            <div class="p-3">
+                                <div class="step-img-wrapper pb-3">
+                                    <img src="./assets/img/v2/step-img-1.png" alt="step 1" class="step-img">
+                                </div>
+                                <h5 class="step-subheader bold dark-purple pb-3 text-uppercase">{{ str.section6?.fillOutTheRegistrationFormOnThisPage }}</h5>
+                                <p class="step-description px-3">{{ str.section6?.onceYourRegistrationIsAcceptedYouWillAutomaticallyBecomeTheNewestMemberOfTheBitcoinTraderThisMeansYouWillGetToClaimOurProprietaryBitcoinTradingSoftwareForFree
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 step-wrapper-col">
+                        <div class="step-wrapper step-wrapper-2">
+                            <h3 class="step-header white step-header-2">{{ str.section6?.step2 }}</h3>
+                            <div class="p-3">
+                                <div class="step-img-wrapper pb-3">
+                                    <img src="./assets/img/v2/step-img-2.png" alt="step 2" class="step-img">
+                                </div>
+                                <h5 class="step-subheader bold dark-purple pb-3 text-uppercase">{{ str.section6?.fundYourAccount }}</h5>
+                                <p class="step-description px-3">
+                                    <span>{{ str.section6?.likeAnyBusinessYouNeedWorkingCapitalToGetStartedSoToStartProfitingWithTheBitcoinTraderYouMustInvestAnyAmountYouDesireOf250OrMore
+                                        }}
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 step-wrapper-col">
+                        <div class="step-wrapper last-step-wrapper step-wrapper-3">
+                            <h3 class="step-header white step-header-3 text-uppercase">{{ str.section6?.step3 }}</h3>
+                            <div class="p-3">
+                                <div class="step-img-wrapper pb-3">
+                                    <img src="./assets/img/v2/step-img-3.png" alt="step 3" class="step-img">
+                                </div>
+                                <h5 class="step-subheader bold dark-purple pb-3">{{ str.section6?.startProfiting }}</h5>
+                                <p class="step-description px-3">{{ str.section6?.clickTradeToEnjoyPreciseAndAccurateHandsfreeTradingPoweredByOurAwardwinningAlgorithmYouCanAlsoSetTheTradingToManualIfYouPreferToTradeOnYourOwn
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works-btn-wrapper">
+            <button class="yellow-btn open-free-account-btn scroll-top-btn" (click)="scrollTop()">
+                <span>{{ str.section6?.openFreeAccount }}</span>
+            </button>
+        </div>
+    </div>
+    <div class="faq-section">
+        <div class="container">
+            <h2 class="faq-section-header text-center dark-purple bold text-uppercase">{{ str.section7?.frequentlyAskedQuestions }}</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-1">
+                                <h4 class="faq-question light-purple bold">{{ faqs[0].q }}</h4>
+                                <p class="faq-answer">{{ faqs[0].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-2">
+                                <h4 class="faq-question light-purple bold">{{ faqs[1].q }}</h4>
+                                <p class="faq-answer">{{ faqs[1].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-3">
+                                <h4 class="faq-question light-purple bold">{{ faqs[2].q }}</h4>
+                                <p class="faq-answer">{{ faqs[2].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-4">
+                                <h4 class="faq-question light-purple bold">{{ faqs[3].q }}</h4>
+                                <p class="faq-answer">{{ faqs[3].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-5">
+                                <h4 class="faq-question light-purple bold">{{ faqs[4].q }}</h4>
+                                <p class="faq-answer">{{ faqs[4].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="faq-wrapper faq-wrapper-6">
+                                <h4 class="faq-question light-purple bold">{{ faqs[5].q }}</h4>
+                                <p class="faq-answer">{{ faqs[5].a }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pre-footer-section">
+        <div class="container">
+            <button class="pre-footer-btn scroll-top-btn" (click)="scrollTop()">
+                <span>{{ str.section8?.getStartedNow }}</span>
+            </button>
+        </div>
+    </div>
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center justify-content-center">
+                    <img src="./assets/img/logo-small.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</ng-container>

@@ -1,0 +1,44 @@
+@import './bootstrap.scss';
+@import '~bootstrap/scss/bootstrap';
+@import '~flag-icon-css/css/flag-icon.min.css';
+
+[hidden] {
+	display: none;
+}
+* {
+  font-family: Roboto,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.new-container{
+  width: 992px;
+  margin: 0 auto;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: $success;
+  animation: spinner .6s linear infinite;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+.font-9{
+  font-size: 20px !important;
+}

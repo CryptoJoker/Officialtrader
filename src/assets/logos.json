@@ -1,0 +1,28 @@
+{
+    "logos": [
+        {
+            "id": 1,
+            "url": "https://tradefintech.com/wp-content/uploads/2017/06/TF_Logo.png"
+        },
+        {
+            "id": 2,
+            "url": "https://s3.eu-central-1.amazonaws.com/brokerlogos/Golden-Markets-New-Logo.png"
+        },
+        {
+            "id": 3,
+            "url": "https://s3.eu-central-1.amazonaws.com/brokerlogos/logo.png"
+        },
+        {
+            "id": 4,
+            "url": "https://s3.eu-central-1.amazonaws.com/brokerlogos/logo-itrader.png"
+        },
+		{
+            "id": 5,
+            "url": "https://s3.eu-central-1.amazonaws.com/brokerlogos/Brighter-Trade-Logo.png"
+        },
+		{
+            "id": 6,
+            "url": "https://s3.eu-central-1.amazonaws.com/brokerlogos/1532017296gfc2.jpg"
+        }
+    ]
+}
